@@ -1,0 +1,16 @@
+<!DOCTYPE html> {% extends "todolist.html" %} {% block content %}
+
+
+<form>
+    <label for="fname">{{new.id}} </label><br>
+    <label for="fname">{{new.content}}</label><br>
+    <!-- <input type="text" id="fname" name="fname"><br> -->
+
+</form>
+
+<form action="/todoapp/" method="post">{% csrf_token %}
+    <input type="submit" value="Delete">
+    <!-- <form action="updateTodoItem/{{i.id}}" method="post"> -->
+
+    <a href="update/{{i.pk}}"><button type="submit" >update</button></a> </form>
+{% endblock %}
